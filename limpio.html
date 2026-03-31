@@ -3,305 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMPRERECARGA | Recargas y Mantenimiento de Cartuchos y Tóner</title>
-  <meta name="description" content="Profesionales en Impresión y Recargas - Recarga y Mantenimiento de Cartuchos y Tóner 24/7 en Barranquilla y Costa Caribe.">
+  <title>Kind Tree • Recarga de Extintores Bogotá</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-dark: #000000;
-      --bg-darker: #0a0a0a;
-      --accent-blue: #0055cc;
-      --accent-light: #00aaff;
-      --text-light: #e0e0ff;
-      --white: #ffffff;
-      --green-whatsapp: #25D366;
-      --green-dark: #1ebe52;
+    body { font-family: 'Inter', sans-serif; }
+    .heading { font-family: 'Space Grotesk', sans-serif; }
+
+    .hero-bg {
+      background: linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.88)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a6a6a0b6e3b0?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+      background-attachment: fixed;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      line-height: 1.5;
+    .card {
+      background: white;
+      border: 2px solid #fce7f3;
+      transition: all 0.4s ease;
     }
-
-    /* Navegación superior */
-    nav {
-      background: var(--bg-darker);
-      border-bottom: 4px solid var(--accent-blue);
-      padding: 1rem 5%;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.8);
-    }
-
-    nav .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .logo-img {
-      height: 50px;                /* Ajusta el tamaño según tu logo */
-      width: auto;
-    }
-
-    .logo-text {
-      color: var(--accent-light);
-      font-size: 2rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      margin-left: 2.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-    }
-
-    nav a:hover { color: var(--accent-light); }
-
-    /* Hero principal */
-    header.hero {
-      height: 100vh;
-      min-height: 800px;
-      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)), 
-                  url('https://images.unsplash.com/photo-1589389364357-0a3a8d0e0d3c?auto=format&fit=crop&q=80') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 5%;
-    }
-
-    .hero-content {
-      max-width: 1000px;
-    }
-
-    .hero h1 {
-      font-size: 5.5rem;
-      color: var(--accent-light);
-      text-shadow: 0 8px 20px rgba(0,170,255,0.6);
-      text-transform: uppercase;
-      letter-spacing: 6px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h2 {
-      font-size: 2.2rem;
-      color: var(--white);
-      margin-bottom: 2.5rem;
-      max-width: 800px;
-    }
-
-    .hero p {
-      font-size: 1.4rem;
-      color: var(--text-light);
-      margin-bottom: 3rem;
-      max-width: 900px;
-    }
-
-    .contact-display {
-      font-size: 2.2rem;
-      font-weight: bold;
-      color: var(--accent-light);
-      margin: 2rem 0;
-      background: rgba(0,85,204,0.15);
-      padding: 1.5rem 3rem;
-      border-radius: 12px;
-      border: 2px solid var(--accent-blue);
-      display: inline-block;
-    }
-
-    .contact-display span {
-      color: var(--white);
-      font-size: 1.9rem;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background: var(--accent-blue);
-      color: white;
-      padding: 1.5rem 4rem;
-      font-size: 1.6rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      text-transform: uppercase;
-      margin: 1rem 0.5rem;
-      transition: all 0.3s;
-      box-shadow: 0 6px 20px rgba(0,85,204,0.5);
-      cursor: pointer;
-    }
-
-    .btn-primary:hover {
-      background: #0044aa;
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,85,204,0.7);
-    }
-
-    .btn-whatsapp-style {
-      background: var(--green-whatsapp);
-      box-shadow: 0 6px 20px rgba(37,213,102,0.5);
-      cursor: default;
-      opacity: 0.9;
-    }
-
-    .btn-whatsapp-style:hover {
-      background: var(--green-dark);
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(37,213,102,0.7);
-    }
-
-    /* Beneficios */
-    .benefits {
-      padding: 8rem 5% 6rem;
-      background: var(--bg-darker);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      text-align: center;
-    }
-
-    .benefit-card {
-      background: #111;
-      border: 2px solid var(--accent-blue);
-      border-radius: 12px;
-      padding: 2.5rem 1.5rem;
-      transition: transform 0.3s;
-    }
-
-    .benefit-card:hover { transform: translateY(-12px); }
-
-    .icon-big { font-size: 5rem; margin-bottom: 1.2rem; color: var(--accent-light); }
-
-    .benefit-card h3 { font-size: 1.5rem; margin-bottom: 1rem; text-transform: uppercase; color: white; }
-
-    section { padding: 6rem 5%; }
-
-    h2.section-title {
-      text-align: center;
-      font-size: 3.2rem;
-      color: var(--accent-light);
-      margin-bottom: 4rem;
-      text-transform: uppercase;
-      border-bottom: 4px solid var(--accent-blue);
-      padding-bottom: 1rem;
-    }
-
-    footer {
-      background: #000;
-      padding: 4rem 5%;
-      text-align: center;
-      border-top: 4px solid var(--accent-blue);
-      color: #aaa;
-      font-size: 1.1rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 4rem; }
-      .hero h2 { font-size: 1.8rem; }
-      .contact-display { font-size: 1.8rem; padding: 1rem 2rem; }
-      .logo-img { height: 40px; }
+    .card:hover {
+      border-color: #e11d8f;
+      box-shadow: 0 20px 40px -10px rgba(225, 29, 143, 0.12);
+      transform: translateY(-6px);
     }
   </style>
 </head>
-<body>
+<body class="bg-white text-zinc-900">
 
-  <nav>
-    <div class="container">
-      <div class="logo-container">
-        <!-- Logo como imagen (cambia la URL por tu logo real) -->
-        <!-- <img src="https://tu-dominio.com/logo-imprerecarga.png" alt="ImpreRecarga Logo" class="logo-img"> -->
-        
-        <!-- Si no tienes imagen aún, usa texto estilizado como logo -->
-        <div class="logo-text">IMPRERECARGA</div>
+  <!-- HEADER -->
+  <header class="bg-white border-b border-zinc-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl">🌳</div>
+        <span class="heading text-4xl font-bold tracking-tighter">
+          KIND <span class="text-pink-600">TREE</span>
+        </span>
       </div>
-      <div>
-        <a href="#">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#cobertura">Cobertura</a>
-        <a href="#porque">Por qué Elegirnos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="hero-content">
-      <h1>IMPRERECARGA</h1>
-      <h2>Profesionales en Impresión y Recargas</h2>
-      <p>Recarga y Mantenimiento de Cartuchos y Tóner 24/7 - Servicio rápido en Barranquilla y Costa Caribe - Garantía total y ahorro hasta 70%</p>
       
-      <div class="contact-display">
-        <span>WhatsApp:</span> 320 342 3237<br>
-        <span>Teléfono:</span> 320 342 3237
-      </div>
-
-      <div style="margin: 2rem 0;">
-        <a href="#contacto" class="btn-primary">SOLICITAR SERVICIO</a>
-        <div class="btn-primary btn-whatsapp-style">
-          WHATSAPP DIRECTO
-        </div>
-      </div>
+      <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="#" class="hover:text-pink-600 transition-colors">Inicio</a>
+        <a href="#servicios" class="hover:text-pink-600 transition-colors">Servicios</a>
+        <a href="#" class="hover:text-pink-600 transition-colors">Cobertura</a>
+        <a href="#" class="hover:text-pink-600 transition-colors">Por qué elegirnos</a>
+        <a href="#contacto" class="hover:text-pink-600 transition-colors">Contacto</a>
+      </nav>
+      
+      <a href="tel:3003024002" class="flex items-center gap-3 bg-pink-600 hover:bg-pink-700 text-white font-semibold px-8 py-3.5 rounded-3xl transition-all">
+        📞 316 477 9231
+      </a>
     </div>
   </header>
 
-  <section class="benefits">
-    <div class="benefit-card">
-      <div class="icon-big">⏰</div>
-      <h3>DISPONIBILIDAD 24/7</h3>
-      <p>Emergencias y servicios programados cualquier día y hora</p>
-    </div>
-    <div class="benefit-card">
-      <div class="icon-big">✅</div>
-      <h3>CUMPLIMIENTO TOTAL</h3>
-      <p>Procesos alineados con estándares de calidad en impresión</p>
-    </div>
-    <div class="benefit-card">
-      <div class="icon-big">🛡️</div>
-      <h3>EXPERTOS CERTIFICADOS</h3>
-      <p>Técnicos con experiencia en recargas y prevención de fallos</p>
-    </div>
-    <div class="benefit-card">
-      <div class="icon-big">🤝</div>
-      <h3>GARANTÍA Y CALIDAD</h3>
-      <p>Garantía en cada servicio - Materiales premium</p>
+  <!-- HERO -->
+  <section class="hero-bg min-h-[100dvh] flex items-center relative">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h1 class="heading text-[5.5rem] md:text-[7.2rem] leading-none font-bold tracking-tighter mb-6 text-zinc-900">
+        KIND TREE
+      </h1>
+      <p class="text-3xl md:text-4xl text-zinc-700 max-w-4xl mx-auto font-light mb-16">
+        Recarga de Extintores Profesional
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="#servicios" class="bg-pink-600 hover:bg-pink-700 text-white font-bold text-xl px-16 py-7 rounded-3xl transition-all">
+          VER SERVICIOS
+        </a>
+        <a href="#contacto" class="border-2 border-pink-600 hover:bg-pink-50 text-pink-600 font-bold text-xl px-16 py-7 rounded-3xl transition-all">
+          CONTACTARNOS
+        </a>
+      </div>
     </div>
   </section>
 
-  <section id="contacto">
-    <h2 class="section-title">CONTÁCTANOS</h2>
-    <div style="text-align:center; font-size:2.2rem; margin:3rem 0; color:var(--accent-light); font-weight:bold;">
-      WhatsApp: 320 342 3237<br>
-      Teléfono: 320 342 3237<br>
-      Email: info@imprerecarga.com
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="heading text-5xl font-bold text-zinc-900">Nuestros Servicios</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="card rounded-3xl p-9">
+          <h3 class="text-pink-600 text-2xl font-bold mb-5">RECARGA DE EXTINTORES</h3>
+          <p class="text-zinc-600">Recarga completa y profesional utilizando polvo químico, CO₂, agua, espuma y agentes especializados.</p>
+        </div>
+
+        <div class="card rounded-3xl p-9">
+          <h3 class="text-pink-600 text-2xl font-bold mb-5">MANTENIMIENTO PREVENTIVO</h3>
+          <p class="text-zinc-600">Inspección detallada, limpieza integral, prueba de presión y servicio de mantenimiento periódico según las necesidades de cada cliente.</p>
+        </div>
+
+        <div class="card rounded-3xl p-9">
+          <h3 class="text-pink-600 text-2xl font-bold mb-5">INSPECCIÓN Y CERTIFICACIÓN</h3>
+          <p class="text-zinc-600">Análisis técnico completo con entrega de certificado oficial válido para residencias, oficinas e industrias.</p>
+        </div>
+
+        <div class="card rounded-3xl p-9">
+          <h3 class="text-pink-600 text-2xl font-bold mb-5">VENTA DE EXTINTORES NUEVOS</h3>
+          <p class="text-zinc-600">Extintores nuevos de alta calidad en todas las capacidades y categorías: ABC, BC, CO₂ y modelos especiales.</p>
+        </div>
+
+        <div class="card rounded-3xl p-9">
+          <h3 class="text-pink-600 text-2xl font-bold mb-5">RECARGA A DOMICILIO</h3>
+          <p class="text-zinc-600">Servicio integral de recarga y mantenimiento realizado directamente en tu hogar o empresa.</p>
+        </div>
+
+        <div class="card rounded-3xl p-9">
+          <h3 class="text-pink-600 text-2xl font-bold mb-5">SEÑALIZACIÓN Y EQUIPOS DE EMERGENCIA</h3>
+          <p class="text-zinc-600">Suministro e instalación de señalética de seguridad, gabinetes, mangueras contra incendios, hidrantes y kits completos de emergencia.</p>
+        </div>
+
+      </div>
     </div>
-    <p style="text-align:center; font-size:1.4rem; color:#aaa; max-width:800px; margin:0 auto;">
-      Copia los números para contactarnos directamente. Estamos listos para ayudarte con tus recargas y mantenimientos.
-    </p>
   </section>
 
-  <footer>
-    <p>Servicio en Barranquilla y Costa Caribe</p>
-    <p>Política de privacidad | Términos y condiciones</p>
-    <p>© 2026 IMPRERECARGA - Profesionales en Impresión y Recargas</p>
+  <!-- CTA -->
+  <section id="contacto" class="py-20 bg-zinc-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="heading text-5xl font-bold mb-8 text-zinc-900">¿Necesitas recargar tus extintores?</h2>
+      <p class="text-xl text-zinc-600 mb-10">Contáctanos y recibe atención rápida y profesional</p>
+      
+      <a href="tel:3003024002" class="inline-flex items-center gap-4 bg-pink-600 hover:bg-pink-700 text-white text-3xl font-bold px-16 py-8 rounded-3xl transition-all">
+        📞 316 477 9231
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 text-zinc-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+      © 2026 Kind Tree • Recarga Profesional de Extintores 
+    </div>
   </footer>
 
 </body>
