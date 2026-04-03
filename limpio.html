@@ -9,13 +9,11 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .heading { font-family: 'Space Grotesk', sans-serif; }
-
     .hero-bg {
-      background: linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.88)), 
+      background: linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.88)),
                   url('https://images.unsplash.com/photo-1581091226825-a6a6a0b6e3b0?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
       background-attachment: fixed;
     }
-
     .card {
       background: white;
       border: 2px solid #fce7f3;
@@ -25,6 +23,14 @@
       border-color: #e11d8f;
       box-shadow: 0 20px 40px -10px rgba(225, 29, 143, 0.12);
       transform: translateY(-6px);
+    }
+    .neon-button {
+      transition: all 0.3s ease;
+    }
+    .neon-button:hover {
+      box-shadow: 0 0 25px #ff00ff,
+                  0 0 40px #ff00ff;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -39,7 +45,7 @@
           KIND <span class="text-pink-600">TREE</span>
         </span>
       </div>
-      
+     
       <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
         <a href="#" class="hover:text-pink-600 transition-colors">Inicio</a>
         <a href="#servicios" class="hover:text-pink-600 transition-colors">Servicios</a>
@@ -47,10 +53,6 @@
         <a href="#" class="hover:text-pink-600 transition-colors">Por qué elegirnos</a>
         <a href="#contacto" class="hover:text-pink-600 transition-colors">Contacto</a>
       </nav>
-      
-      <a href="tel:3003024002" class="flex items-center gap-3 bg-pink-600 hover:bg-pink-700 text-white font-semibold px-8 py-3.5 rounded-3xl transition-all">
-        📞 316 477 9231
-      </a>
     </div>
   </header>
 
@@ -63,13 +65,19 @@
       <p class="text-3xl md:text-4xl text-zinc-700 max-w-4xl mx-auto font-light mb-16">
         Recarga de Extintores Profesional
       </p>
-      
-      <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="#servicios" class="bg-pink-600 hover:bg-pink-700 text-white font-bold text-xl px-16 py-7 rounded-3xl transition-all">
+     
+      <!-- Botones estilo neon como en tu imagen -->
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="#servicios" 
+           class="neon-button bg-transparent border-4 border-pink-500 text-pink-600 hover:text-white hover:bg-pink-600 font-bold text-2xl px-16 py-7 rounded-3xl transition-all tracking-widest">
           VER SERVICIOS
         </a>
-        <a href="#contacto" class="border-2 border-pink-600 hover:bg-pink-50 text-pink-600 font-bold text-xl px-16 py-7 rounded-3xl transition-all">
-          CONTACTARNOS
+        
+        <a href="https://wa.me/573164779231" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="neon-button bg-[#FF00FF] hover:bg-[#e600e6] text-black font-bold text-2xl px-16 py-7 rounded-3xl transition-all tracking-widest shadow-2xl">
+          WHATSAPP DIRECTO
         </a>
       </div>
     </div>
@@ -81,61 +89,64 @@
       <div class="text-center mb-16">
         <h2 class="heading text-5xl font-bold text-zinc-900">Nuestros Servicios</h2>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
         <div class="card rounded-3xl p-9">
           <h3 class="text-pink-600 text-2xl font-bold mb-5">RECARGA DE EXTINTORES</h3>
           <p class="text-zinc-600">Recarga completa y profesional utilizando polvo químico, CO₂, agua, espuma y agentes especializados.</p>
         </div>
-
         <div class="card rounded-3xl p-9">
           <h3 class="text-pink-600 text-2xl font-bold mb-5">MANTENIMIENTO PREVENTIVO</h3>
           <p class="text-zinc-600">Inspección detallada, limpieza integral, prueba de presión y servicio de mantenimiento periódico según las necesidades de cada cliente.</p>
         </div>
-
         <div class="card rounded-3xl p-9">
           <h3 class="text-pink-600 text-2xl font-bold mb-5">INSPECCIÓN Y CERTIFICACIÓN</h3>
           <p class="text-zinc-600">Análisis técnico completo con entrega de certificado oficial válido para residencias, oficinas e industrias.</p>
         </div>
-
         <div class="card rounded-3xl p-9">
           <h3 class="text-pink-600 text-2xl font-bold mb-5">VENTA DE EXTINTORES NUEVOS</h3>
           <p class="text-zinc-600">Extintores nuevos de alta calidad en todas las capacidades y categorías: ABC, BC, CO₂ y modelos especiales.</p>
         </div>
-
         <div class="card rounded-3xl p-9">
           <h3 class="text-pink-600 text-2xl font-bold mb-5">RECARGA A DOMICILIO</h3>
           <p class="text-zinc-600">Servicio integral de recarga y mantenimiento realizado directamente en tu hogar o empresa.</p>
         </div>
-
         <div class="card rounded-3xl p-9">
           <h3 class="text-pink-600 text-2xl font-bold mb-5">SEÑALIZACIÓN Y EQUIPOS DE EMERGENCIA</h3>
           <p class="text-zinc-600">Suministro e instalación de señalética de seguridad, gabinetes, mangueras contra incendios, hidrantes y kits completos de emergencia.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CTA (se mantiene pero sin número de teléfono) -->
   <section id="contacto" class="py-20 bg-zinc-50">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="heading text-5xl font-bold mb-8 text-zinc-900">¿Necesitas recargar tus extintores?</h2>
       <p class="text-xl text-zinc-600 mb-10">Contáctanos y recibe atención rápida y profesional</p>
-      
-      <a href="tel:3003024002" class="inline-flex items-center gap-4 bg-pink-600 hover:bg-pink-700 text-white text-3xl font-bold px-16 py-8 rounded-3xl transition-all">
-        📞 316 477 9231
-      </a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-zinc-900 text-zinc-400 py-12">
-    <div class="max-w-7xl mx-auto px-6 text-center text-sm">
-      © 2026 Kind Tree • Recarga Profesional de Extintores 
+  <!-- FOOTER ESTILO OSCURO CON SOLO WHATSAPP -->
+  <footer class="bg-zinc-950 text-zinc-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-pink-500 font-semibold text-xl mb-3">
+        WhatsApp: <a href="https://wa.me/573164779231" target="_blank" class="hover:underline">+57 316 477 9231</a>
+      </p>
+      <p class="text-sm text-zinc-500">
+        © 2026 Kind Tree • Recarga Profesional de Extintores • 
+      </p>
     </div>
   </footer>
+
+  <!-- BOTÓN WHATSAPP FLOTANTE (opcional pero recomendado) -->
+  <a href="https://wa.me/573164779231" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 bg-[#25D366] hover:bg-[#20ba5a] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110 z-[9999]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.485-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
